@@ -10,16 +10,12 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.inventory.Inventory;
 
-/**
- * Created by Jakey on 19/7/2015.
- */
 public class ClassCommand implements CommandExecutor, Listener {
 
     private void openClassGUI(Player player) {
         Inventory gui = Bukkit.createInventory(null, 9, ChatColor.BLUE + "Select a class");
 
         gui.setItem(1, ClassSelectorItems.Tank());
-
 
         player.openInventory(gui);
     }

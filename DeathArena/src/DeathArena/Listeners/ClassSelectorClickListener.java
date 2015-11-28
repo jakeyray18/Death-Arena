@@ -9,9 +9,6 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 
-/**
- * Created by Jakey on 19/7/2015.
- */
 public class ClassSelectorClickListener implements Listener{
 
     DeathArenaMain plugin;
