@@ -1,14 +1,11 @@
 package DeathArena.Configs;
 
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.Reader;
 
 public class ConfigUtils {
 
@@ -21,7 +18,7 @@ public class ConfigUtils {
             YamlConfiguration yamlPlayerConfig = YamlConfiguration.loadConfiguration(playerConfig);
             yamlPlayerConfig.addDefault("PlayerName", player.getName());
             yamlPlayerConfig.options().copyDefaults(true);
-            try{
+            try {
                 yamlPlayerConfig.save(playerConfig);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -57,11 +54,13 @@ public class ConfigUtils {
                 saveCConfig(player, yamlPlayerConfig, plugin);
             }
             reloadCConfig(player, plugin);
+        } else {
+            setCConfig(player, plugin);
         }
         return yamlPlayerConfig;
     }
 
-    public void saveCConfig(Player player,YamlConfiguration config,  Plugin plugin) {
+    public void saveCConfig(Player player, YamlConfiguration config, Plugin plugin) {
 
         String filename = player.getUniqueId().toString();
         File playerConfig = new File(plugin.getDataFolder() + File.separator + "/users/" + filename + ".yml");

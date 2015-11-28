@@ -4,10 +4,21 @@ import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 
-/**
- * Created by Jakey on 16/7/2015.
- */
+import java.util.List;
+
 public class TankItems {
+
+    List<ItemStack> tankList;
+
+    public List<ItemStack> getTankList() {
+        tankList.add(Prot2DiamondBoots());
+        tankList.add(Prot2DiamondLegs());
+        tankList.add(Prot2DiamondChest());
+        tankList.add(Prot2DiamondHelm());
+        tankList.add(TankSword());
+        tankList.add(TankFood());
+        return tankList;
+    }
 
     public static ItemStack Prot2DiamondHelm() {
         ItemStack helm = new ItemStack(Material.DIAMOND_HELMET, 1);
@@ -45,8 +56,7 @@ public class TankItems {
     }
 
     public static ItemStack TankFood() {
-        ItemStack food = new ItemStack(Material.COOKED_BEEF, 32);
 
-        return food;
+        return new ItemStack(Material.COOKED_BEEF, 32);
     }
 }

@@ -11,3 +11,9 @@ commands:
     loadedit:
         usage:
         description: Command to test loading/editing/saving of player configs.
+    saveinv:
+        usage:
+        description: Command to test saving inventory to file.
+    restoreinv:
+        usage:
+        description: Command to test restoring stored inventories.

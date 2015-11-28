@@ -2,6 +2,7 @@ package DeathArena;
 
 import DeathArena.Commands.ClassCommand;
 import DeathArena.Commands.ConfigTest;
+import DeathArena.Commands.InventorySaveTest;
 import DeathArena.Configs.ConfigUtils;
 import DeathArena.Listeners.ClassSelectorClickListener;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -24,6 +25,8 @@ public class DeathArenaMain extends JavaPlugin {
         getCommand("class").setExecutor(new ClassCommand());
         getCommand("saveplayer").setExecutor(new ConfigTest(this));
         getCommand("loadedit").setExecutor(new ConfigTest(this));
+        getCommand("saveinv").setExecutor(new InventorySaveTest(this));
+        getCommand("restoreinv").setExecutor(new InventorySaveTest(this));
 
     }
 }

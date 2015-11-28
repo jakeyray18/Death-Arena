@@ -1,6 +1,7 @@
 package DeathArena.Listeners;
 
 import DeathArena.DeathArenaMain;
+import DeathArena.Handlers.GiveClassItems;
 import DeathArena.Handlers.TeleportHandler;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -16,6 +17,8 @@ public class ClassSelectorClickListener implements Listener{
         this.plugin = plugin;
         plugin.getServer().getPluginManager().registerEvents(this, plugin);
     }
+
+    GiveClassItems giveItems = new GiveClassItems();
 
     @EventHandler
     public void onInventoryClick(InventoryClickEvent event) {
@@ -33,8 +36,8 @@ public class ClassSelectorClickListener implements Listener{
 
         switch (event.getCurrentItem().getType()) {
             case DIAMOND_CHESTPLATE:
-                //Remember to change later
                 TeleportHandler.teleport(player, player.getWorld(), -260, 70, 135);
+                giveItems.giveTankItems(player, plugin);
         }
 
     }

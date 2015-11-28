@@ -4,9 +4,6 @@ import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 
-/**
- * Created by Jakey on 16/7/2015.
- */
 public class AlchemistItems {
 
     public static ItemStack Prot4Unb3LeatherHelm() {
