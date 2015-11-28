@@ -10,4 +10,4 @@ commands:
         description: Command to test saving player configs.
     loadedit:
         usage:
-        description: Command to test loing/editing/saving of player configs.
+        description: Command to test loading/editing/saving of player configs.
