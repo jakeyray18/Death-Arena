@@ -5,3 +5,9 @@ commands:
     class:
         usage:
         description: Chooses a class.
+    saveplayer:
+        usage:
+        description: Command to test saving player configs.
+    loadedit:
+        usage:
+        description: Command to test loing/editing/saving of player configs.
