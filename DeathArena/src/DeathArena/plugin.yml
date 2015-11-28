@@ -17,3 +17,6 @@ commands:
     restoreinv:
         usage:
         description: Command to test restoring stored inventories.
+    reloadarena:
+        usage:
+        description: Command to test resetting the arena world.

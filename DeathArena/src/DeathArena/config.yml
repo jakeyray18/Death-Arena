@@ -1,0 +1,5 @@
+##The world in which the arena is placed, this world will be totally reset after every game.
+ArenaWorld: DeathArena
+
+##The world users will get teleported to if they get stuck in the arena while its resetting.
+LobbyWorld: world
